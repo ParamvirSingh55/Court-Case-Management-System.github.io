@@ -84,3 +84,18 @@ span.psw {
         width: 80%;
     }
 }
+
+.signup-link {
+  text-align: center;
+  margin-top: -10px;
+  color: #555;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
