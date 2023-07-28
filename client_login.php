@@ -40,7 +40,7 @@ if (isset($_POST["client-login"])) {
 			echo "<script>alert('Email not found')</script>";
 		} else {
 			if (password_verify($password, $client_pw) == false) {
-				echo "invalid password";
+				echo "<script>alert('Invalid Password')</script>";
 			} else {
 				echo "correct pw";
 				$_SESSION['client_id'] = $clientid;
