@@ -37,10 +37,10 @@ if (isset($_POST["client-login"])) {
 		}
 		$numRows = $stmt->num_rows;
 		if ($numRows === 0) {
-			echo "email not found";
+			echo "<script>alert('Email not found')</script>";
 		} else {
 			if (password_verify($password, $client_pw) == false) {
-				echo "invalid password";
+				echo "<script>alert('Invalid Password')</script>";
 			} else {
 				echo "correct pw";
 				$_SESSION['client_id'] = $clientid;
@@ -82,7 +82,7 @@ if (isset($_POST["client-login"])) {
                     Cancel
                 </button>
             </div>
-            <a href="client_signup.php"> Dont have account? Signup </a>
+            <p class="signup-link"> Don't have account? <a href="client_signup.php">Signup </a></p>
         </form>
     </div>
 </body>
